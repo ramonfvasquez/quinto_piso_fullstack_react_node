@@ -1,0 +1,9 @@
+<h3 class="delete-question">
+    ¿Querés eliminar la obra <strong><span>{{content.PlayTitle}}</span></strong>?
+</h3>
+<form action="/admin/plays/play/{{content.PlayId}}/delete" class="delete-form" method="post">
+    <input class="delete-btn" type="submit" value="Eliminar" />
+    <a class="cancel-btn" href="javascript:history.back()">
+        Cancelar
+    </a>
+</form>

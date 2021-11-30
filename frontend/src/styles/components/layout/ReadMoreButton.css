@@ -1,0 +1,17 @@
+.read-more-btn {
+  background-color: rgba(245, 245, 245, 0.9);
+  border: 2px solid firebrick;
+  border-radius: 0 0 10px 10px;
+  border-top: none;
+  bottom: 0;
+  box-shadow: 0 -1px 5px 0 black;
+  box-sizing: border-box;
+  color: firebrick;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-left: -50px;
+  padding: 30px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}

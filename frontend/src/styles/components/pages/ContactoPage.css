@@ -1,0 +1,158 @@
+.contactopage-body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.contactopage-body .column.left {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.contact-mail {
+  color: firebrick;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  text-decoration: none;
+  width: 80%;
+}
+
+.contactopage-body img {
+  border-radius: 100px;
+  height: 600px;
+  width: 600px;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.contact-form * {
+  font-size: 1.5rem;
+  padding: 10px;
+  width: 100%;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form label span {
+  color: firebrick;
+  padding: 0;
+}
+
+.contact-form button,
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  color: firebrick;
+}
+
+.contact-form input::placeholder {
+  text-align: center;
+}
+
+.contact-form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: rgba(178, 34, 34, 0.6);
+  border: none;
+  color: whitesmoke;
+}
+
+.contact-form button:hover {
+  background-color: firebrick;
+}
+
+.contact-form-mandatory {
+  color: firebrick;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.contactopage-body .column.right .contact-mail {
+  display: none;
+}
+
+@media screen and (max-width: 1380px) {
+  .contactopage-body .column.left img {
+    height: 400px;
+    width: 400px;
+  }
+
+  .contactopage-body .column.left {
+    width: 40%;
+  }
+
+  .contactopage-body .column.left a {
+    text-align: center;
+  }
+
+  .contactopage-body .column.right {
+    width: 60%;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contactopage-body .column.left {
+    display: none;
+  }
+
+  .contactopage-body .column.right {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .contactopage-body .column.right .contact-mail {
+    border-radius: 10px;
+    color: firebrick;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .contactopage-body .column.left {
+    display: none;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+}

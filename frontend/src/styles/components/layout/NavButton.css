@@ -1,0 +1,47 @@
+.nav-btn {
+  background-color: rgb(211, 89, 89);
+  border: none;
+  border-radius: 0 0 10px 10px;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 90%;
+}
+
+.gold:hover {
+  background-color: gold;
+  color: black;
+}
+
+.green:hover {
+  background-color: green;
+}
+
+.orangered:hover {
+  background-color: orangered;
+}
+
+.purple:hover {
+  background-color: purple;
+}
+
+.royalblue:hover {
+  background-color: royalblue;
+}
+
+@media screen and (min-width: 890px) {
+  .nav-btn:hover {
+    align-items: flex-end;
+    display: flex;
+    font-size: 1.6rem;
+    height: 90px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .nav-btn {
+    border-radius: 0;
+    width: 100%;
+  }
+}

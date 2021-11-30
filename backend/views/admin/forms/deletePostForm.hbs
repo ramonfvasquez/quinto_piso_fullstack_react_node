@@ -1,0 +1,9 @@
+<h3 class="delete-question">
+    ¿Querés eliminar la publicación <strong><span>{{content.BlogPostTitle}}</span></strong>?
+</h3>
+<form action="/admin/blog/post/{{content.BlogPostId}}/delete" class="delete-form" method="post">
+    <input class="delete-btn" type="submit" value="Eliminar" />
+    <a class="cancel-btn" href="javascript:history.back()">
+        Cancelar
+    </a>
+</form>

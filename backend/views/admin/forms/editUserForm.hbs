@@ -1,0 +1,21 @@
+<div class="form-container">
+    <form action="/admin/users/user/{{content.UserId}}/edit" method="post">
+        <div class="form-group">
+            <label for="user-full-name">
+                Nombre completo
+            </label>
+            <input class="form-control" id="user-full-name" name="userFullName" type="text" value="{{content.UserFullName}}" />
+        </div>
+        <div class="form-group">
+            <label for="username">
+                Nombre de usuario
+            </label>
+            <input class="form-control" id="username" name="username" type="text" value="{{content.UserUsername}}" />
+            <div class="incorrect-data-container" id="username-incorrect"></div>
+        </div>
+        <div class="form-group">
+            <input class="submit-btn" id="submit-user-btn" type="submit" value="Editar" />
+        </div>
+    </form>
+</div>
+<script src="/public/javascripts/usernameCheck.js"></script>

@@ -1,0 +1,48 @@
+<div class="section-btns">
+    <a href="/admin/actors/add" class="section-btn section-btn-actor firebrick">
+        Agregar actor/actriz
+    </a>
+</div>
+<div>
+    <ul class="actors">
+        {{#each content}}
+            <li class="section-item actor">
+                <a href="/admin/actors/actor/{{this.ActorId}}" class="title-link">
+                    <h1 class="actor-name">
+                        {{this.ActorFullName}}
+                    </h1>
+                </a>
+                {{#if this.ActorProfilePhoto}}
+                    <img class="page-img actor-img" src="/images/actors/{{this.ActorProfilePhoto}}" alt="" />
+                {{/if}}
+                <p class="actor-cv{{#if this.ActorProfilePhoto}} with-photo{{/if}}">
+                    {{this.ActorCurriculumVitae}}
+                </p>
+                <h4>
+                    Obras en las que participó
+                </h4>
+                <div class="section-subitem-container actor-plays-container">
+                    {{#if this.plays}}
+                        {{#each this.plays}}
+                            <a href="/admin/plays/play/{{this.PlayId}}" class="section-subitem">
+                                {{this.PlayTitle}}
+                            </a>
+                        {{/each}}
+                    {{else}}
+                        <p class="no-subitems">
+                            No participó de ninguna obra.
+                        </p>
+                    {{/if}}
+                </div>
+                <div class="item-btn-container">
+                    <a href="/admin/actors/actor/{{this.ActorId}}/edit" class="item-btn edit-item-btn">
+                        Editar
+                    </a>
+                    <a href="/admin/actors/actor/{{this.ActorId}}/delete" class="item-btn delete-item-btn">
+                        Eliminar
+                    </a>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

@@ -1,0 +1,53 @@
+/* Begin general pages' styles */
+.page-container h3 {
+  font-weight: bold;
+  margin: 50px 0 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.page-subsection-container {
+  margin: 10px 30px;
+  text-align: center;
+}
+
+.page-subsection-container p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.page-btn-container {
+  margin: 0 20px;
+}
+/* End general pages' styles */
+
+/* Begin Play page */
+.play-info,
+.post-info {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+/* End Play page */
+
+/* Begin Actor page */
+.actor-images-cv-container.with-photo {
+  min-height: 300px;
+}
+
+.actor-images-cv-container p {
+  font-size: 1.2rem;
+  margin: 0 auto;
+  text-align: justify;
+  width: 60%;
+}
+
+.actor-image {
+  float: left;
+  margin-right: 30px;
+}
+
+.page-img.large {
+  max-height: 300px;
+}
+/* End Actor page */

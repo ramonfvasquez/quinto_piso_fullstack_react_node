@@ -1,0 +1,98 @@
+.blogpage-container a {
+  color: firebrick;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.blogpage-container a:hover {
+  background-color: rgba(178, 34, 34, 0.6);
+  border-radius: 30px;
+  color: whitesmoke;
+}
+
+.blogpage-img-container {
+  height: 600px;
+  overflow: hidden;
+}
+
+.blogpage-img {
+  width: 100%;
+}
+
+.blogpage-body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post {
+  background-color: rgba(178, 34, 34, 0.2);
+  border-radius: 10px;
+  height: 500px;
+  margin: 50px 0;
+  overflow: hidden;
+  padding: 0 50px;
+  position: relative;
+  width: 50%;
+}
+
+.post::before {
+  background-color: rgba(245, 245, 245, 0.3);
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 1px 5px 0 black;
+  content: "";
+  height: 200px;
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  width: 200px;
+}
+
+.post::after {
+  background-color: whitesmoke;
+  content: "";
+  height: 100px;
+  position: absolute;
+  right: -100px;
+  top: -20px;
+  transform: rotate(45deg);
+  width: 200px;
+}
+
+.post-date {
+  margin: 30px;
+}
+
+.post-title {
+  font-size: 2rem;
+  margin: 0 60px 0 30px;
+}
+
+.post-author {
+  margin: 5px 30px;
+}
+
+.post-body {
+  font-size: 1.2rem;
+  margin: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .post {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .blogpage-img-container {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .blogpage-img-container {
+    height: 300px;
+  }
+}

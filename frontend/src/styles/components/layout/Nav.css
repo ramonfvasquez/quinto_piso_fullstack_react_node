@@ -1,0 +1,30 @@
+.nav-container {
+  align-items: flex-start;
+  display: flex;
+  /* flex-wrap: wrap; */
+  height: 80px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.nav-container * {
+  width: 150px;
+}
+
+@media screen and (max-width: 1640px) {
+  .nav-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .nav-container {
+    height: fit-content;
+    display: block;
+  }
+
+  .nav-container * {
+    width: 100%;
+  }
+}

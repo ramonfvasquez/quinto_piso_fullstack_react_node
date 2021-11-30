@@ -1,0 +1,31 @@
+.homepage-container img {
+  object-fit: cover;
+  height: 900px;
+  width: 100%;
+}
+
+.homepage-body h1 {
+  font-size: 3.5rem;
+}
+
+.homepage-body p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.homepage-body h1,
+.homepage-body p {
+  margin: 30px auto;
+  width: 50%;
+}
+
+@media screen and (max-width: 810px) {
+  .homepage-body h1 {
+    font-size: 2rem;
+  }
+
+  .homepage-body h1,
+  .homepage-body p {
+    width: 80%;
+  }
+}

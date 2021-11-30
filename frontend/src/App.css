@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;800&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+* {
+  cursor: default;
+  font-family: "Maven Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.app-header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.blogpage-container,
+.contactopage-container,
+.nosotrospage-container,
+.obraspage-container,
+.postspage-container {
+  margin-top: 120px;
+  margin-bottom: 50px;
+  min-height: 70vh;
+}
+
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-header h1 {
+  font-size: 3.5rem;
+}
+
+.section-header p {
+  font-size: 1.5rem;
+}
+
+.section-body {
+  margin-top: 50px;
+}
+
+.column {
+  padding: 10px 50px;
+  width: 50%;
+}
+
+@media screen and (max-width: 1640px) {
+  .blogpage-container,
+  .contactopage-container,
+  .nosotrospage-container,
+  .obraspage-container,
+  .postspage-container {
+    margin: 250px 0 50px 0;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .column {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .header-holder {
+    border-radius: 0;
+  }
+
+  .blogpage-container,
+  .contactopage-container,
+  .nosotrospage-container,
+  .obraspage-container,
+  .postspage-container {
+    margin: 400px 0 50px 0;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 611px) {
+  .blogpage-container,
+  .contactopage-container,
+  .nosotrospage-container,
+  .obraspage-container,
+  .postspage-container {
+    margin: 300px 0 50px 0;
+  }
+}

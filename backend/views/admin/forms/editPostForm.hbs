@@ -1,0 +1,26 @@
+<div class="form-container">
+    <form action="/admin/blog/post/{{content.BlogPostId}}/edit" method="post">
+        <div class="form-group">
+            {{#if content.BlogPostEdited}}
+                <div class="incorrect-data-container">
+                    <p class='post-edited no-subitem'>
+                        Editado el {{content.BlogPostPublicationDate}}.
+                    </p>
+                </div>
+            {{/if}}
+            <label for="post-title">
+                Título
+            </label>
+            <input class="form-control" id="post-title" name="postTitle" type="text" value="{{content.BlogPostTitle}}" />
+        </div>
+        <div class="form-group">
+            <label for="post-body">
+                Cuerpo
+            </label>
+            <textarea class="form-control" id="post-body" name="postBody" rows="20">{{content.BlogPostBody}}</textarea>
+        </div>
+        <div class="form-group">
+            <input class="submit-btn" id="add-post-btn" type="submit" value="Editar" />
+        </div>
+    </form>
+</div>

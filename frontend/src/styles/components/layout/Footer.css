@@ -1,0 +1,16 @@
+.footer-container {
+  background-color: firebrick;
+  border-top: 5px solid black;
+  box-sizing: border-box;
+  color: whitesmoke;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.icon {
+  margin: 0 10px;
+  max-height: 24px;
+}

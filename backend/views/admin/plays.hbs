@@ -1,0 +1,78 @@
+<div class="section-btns">
+    <a href="/admin/plays/add" class="section-btn section-btn-play darkgreen">
+        Agregar obra
+    </a>
+</div>
+<div>
+    <ul class="plays">
+        {{#each content}}
+            <li class="section-item play">
+                <a href="/admin/plays/play/{{this.PlayId}}" class="title-link">
+                    <h1 class='play-title'>
+                        {{this.PlayTitle}}
+                    </h1>
+                </a>
+                <p class='play-subtitle'>
+                    {{this.PlayAuthor}} [{{this.PlayFirstYear}}{{#when this.PlayFirstYear "noteq" this.PlayLastYear}}-{{this.PlayLastYear}}{{/when}}]
+                </p>
+                <div class="play-images-container">
+                    {{#each this.photos}}
+                        <img src="/images/plays/{{this.fileName}}" class="page-img play-img" />
+                    {{/each}}
+                </div>
+                <h4>
+                    Elenco
+                </h4>
+                {{#if this.actors}}
+                    <div class="section-subitem-container play-actors-container">
+                        {{#each this.actors}}
+                            <a href="/admin/actors/actor/{{this.this.ActorId}}" class="section-subitem">
+                                {{this.this.ActorFullName}}
+                            </a>
+                        {{/each}}
+                    </div>
+                {{else}}
+                    <p class="no-subitems"> 
+                        No se ha cargado el elenco.
+                    </p>
+                {{/if}}
+                <h4>
+                    Concepción
+                </h4>
+                <div class="play-conception-container">
+                    {{#if this.PlayConception}}
+                        <p class="play-conception"> 
+                            {{this.PlayConception}}
+                        </p>
+                    {{else}}
+                        <p class="no-subitems"> 
+                            No se ha cargado la concepción de la obra.
+                        </p>
+                    {{/if}}
+                </div>
+                <h4>
+                    Puesta en escena
+                </h4>
+                <div class="play-staging-container">
+                    {{#if this.PlayStaging}}
+                        <p class="play-staging"> 
+                            {{this.PlayStaging}}
+                        </p>
+                    {{else}}
+                        <p class="no-subitems"> 
+                            No se ha cargado la puesta en escena.
+                        </p>
+                    {{/if}}
+                </div>
+                <div class="item-btn-container">
+                    <a href="/admin/plays/play/{{this.PlayId}}/edit" class="item-btn edit-item-btn">
+                        Editar
+                    </a>
+                    <a href="/admin/plays/play/{{this.PlayId}}/delete" class="item-btn delete-item-btn">
+                        Eliminar
+                    </a>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

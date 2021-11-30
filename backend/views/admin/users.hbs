@@ -1,0 +1,33 @@
+<p class="section-btns">
+    <a href="/admin/users/add" class="section-btn section-btn-user darkmagenta">
+        Agregar administrador
+    </a>
+</p>
+<ul class="users">
+    {{#each content}}
+        <li class="section-item user">               
+            <h1 class="username">
+                {{this.UserUsername}}
+            </h1>
+            <h3 class="user-name">
+                <strong>Nombre:</strong>
+                <span>
+                    {{this.UserFullName}}
+                </span>
+            </h3>
+            <div class="item-btn-container">
+                <a href="/admin/users/user/{{this.UserId}}/edit" class="item-btn edit-item-btn">
+                    Editar
+                </a>
+                <a href="/admin/users/user/{{this.UserId}}/change_password" class="item-btn change-pass-btn">
+                    Cambiar contraseña
+                </a>
+                {{#when this.currentUser "noteq" this.UserUsername}}
+                <a href="/admin/users/user/{{this.UserId}}/delete" class="item-btn delete-item-btn">
+                    Eliminar
+                </a>
+                {{/when}}
+            </div>
+        </li>
+    {{/each}}
+</ul>

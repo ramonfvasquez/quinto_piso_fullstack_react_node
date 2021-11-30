@@ -1,0 +1,63 @@
+<div class="form-container">
+    <form action="/admin/actors/actor/{{content.ActorId}}/edit" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label for="actor-name">
+                Nombre completo
+            </label>
+            <input class="form-control" id="actor-name" name="actorName" type="text" value="{{content.ActorFullName}}" />
+        </div>
+        <div class="form-group">
+            <label class="photo-uploader-lbl" for="profile-photo-uploader" onchange="showPreviewActor(event)">
+                Subir foto de perfil
+                <input class="photo-uploader" id="profile-photo-uploader" name="profilePhoto" type="file" />
+            </label>
+            {{#if content.ActorProfilePhoto}}
+                <div class="preview" style="height: 300px; margin: 0; visibility: visible;">
+                <small id='delete-photo-msg'>
+                    Hacé clic en la foto para borrarla.
+                </small>
+            {{else}}
+                <div class="preview" style="height: 0; margin: 0; visibility: hidden;">
+                    <small id='delete-photo-msg' style="height: 0; margin: 0; visibility: hidden;">
+                        Hacé clic en la foto para borrarla.
+                    </small>
+            {{/if}}
+                    <ul id="photos-list">
+                        {{#if content.ActorProfilePhoto}}
+                            <li class="play-photo-item" value="0">
+                                <img class="photo" src="/public/images/actors/{{content.ActorProfilePhoto}}"/>
+                            </li>
+                        {{/if}}
+                    </ul>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="actor-cv">
+                Trayectoria profesional
+            </label>
+            <textarea class="form-control" id="actor-cv" name="actorCV" rows="10">{{content.ActorCurriculumVitae}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="plays-selector">
+                Obras
+            </label>
+            <select class="form-control" id="plays-selector" multiple name="actorPlays" size="10">
+                {{#each content.plays}}
+                    <option {{#if this.selected}}selected{{/if}} value="{{this.PlayId}}">
+                        {{this.PlayTitle}}
+                    </option>
+                {{/each}}
+            </select>
+            <small>
+                *Ordenadas según el año de la última función.
+            </small>
+        </div>
+        <div class="form-group">
+            <input class="submit-btn" id="edit-actor-btn" type="submit" value="Editar" />
+        </div>
+        <input id="actor-photo-array" name="actorPhotoArray" style="height: 0; margin: 0; visibility: hidden;" type="text" value="{{content.ActorProfilePhoto}}">
+    </form>
+</div>
+<script src="/public/javascripts/createPhotosArrays.js"></script>
+<script src="/public/javascripts/photoPreviews.js"></script>
+<script src="/public/javascripts/removePhoto.js"></script>

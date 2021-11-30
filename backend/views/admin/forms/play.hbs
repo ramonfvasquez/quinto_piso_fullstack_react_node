@@ -1,0 +1,66 @@
+<div class="page-container">
+    <h4 class="play-info">
+       <strong>Autor:</strong> {{content.PlayAuthor}}
+    </h4>
+    <h4 class="play-info">
+        <strong>Primera función:</strong> {{content.PlayFirstYear}} | <strong>Última función:</strong> {{content.PlayLastYear}}
+    </h4>
+    <h3>
+        Elenco
+    </h3>
+    <div class="page-subsection-container play-actors-container">
+        {{#if content.actors}}
+            {{#each content.actors}}
+                <a href="/admin/actors/actor/{{this.this.ActorId}}" class="section-subitem firebrick">
+                    {{this.this.ActorFullName}}
+                </a>
+            {{/each}}
+        {{else}}
+            <p class="no-subitems">
+                No se ha cargado el elenco.
+            </p>
+        {{/if}}
+    </div>
+    <h3 class="children-title">
+        Fotos
+    </h3>
+    <div class="page-subsection-container play-images-container">
+        {{#if content.photos}}
+            {{#each content.photos}}
+                <img src="/images/plays/{{this.fileName}}" class="page-img large" />
+            {{/each}}
+        {{else}}
+            <p class="no-subitems">
+                No se ha subido ninguna foto.
+            </p>
+        {{/if}}
+    </div>
+    <h3 class="children-title">
+        Concepción
+    </h3>
+    <div class="page-subsection-container play-conception-container">
+        {{#if content.PlayConception}}
+            <p class="play-conception"> 
+                {{content.PlayConception}}
+            </p>
+        {{else}}
+            <p class="no-subitems"> 
+                No se ha cargado la concepción de la obra.
+            </p>
+        {{/if}}
+    </div>
+    <h3 class="children-title">
+        Puesta en escena
+    </h3>
+    <div class="page-subsection-container play-staging-container">
+        {{#if content.PlayStaging}}
+            <p class="play-staging"> 
+                {{content.PlayStaging}}
+            </p>
+        {{else}}
+            <p class="no-subitems"> 
+                No se ha cargado la puesta en escena.
+            </p>
+        {{/if}}
+    </div>
+</div>

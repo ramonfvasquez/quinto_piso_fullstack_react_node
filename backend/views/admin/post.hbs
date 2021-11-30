@@ -1,0 +1,19 @@
+<div class="page-container">
+    <h4 class="post-info">
+       <strong>Autor:</strong> {{content.BlogPostAuthor.userFullName}}
+    </h4>
+    <h4 class="post-info">
+        <strong>
+            {{#if content.BlogPostEdited}}
+            Publicado el:
+            {{else}}
+            Editado el:
+            {{/if}}
+        </strong> {{content.BlogPostPublicationDate}}
+    </h4>
+    <div class="page-subsection-container post-body-container">
+        <p class="post-body"> 
+            {{content.BlogPostBody}}
+        </p>
+    </div>
+</div>

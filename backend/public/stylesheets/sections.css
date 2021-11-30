@@ -1,0 +1,216 @@
+/* Begin section buttons */
+.section-btns.home {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.section-btn {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 15px 0;
+  width: 70%;
+}
+
+.section-btn,
+.section-btn:hover {
+  color: whitesmoke;
+}
+
+.home .section-btn {
+  height: 250px;
+  width: 250px;
+}
+
+.darkblue {
+  background-color: darkblue;
+}
+
+.darkgreen {
+  background-color: darkgreen;
+}
+
+.darkmagenta {
+  background-color: darkmagenta;
+}
+
+.firebrick {
+  background-color: firebrick;
+}
+
+.no-subitems {
+  text-align: center;
+  width: 100%;
+}
+/* End section buttons */
+
+/* Begin Actors, Plays, Users sections */
+.section-item {
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 30px 50px 0 50px;
+  position: relative;
+  width: 70%;
+}
+
+.section-item,
+.section-item:hover {
+  color: black;
+}
+
+.section-item:nth-child(odd) {
+  background-color: rgba(178, 34, 34, 0.3);
+}
+
+.section-item:nth-child(even) {
+  background-color: rgba(0, 100, 0, 0.3);
+}
+
+.page-img {
+  max-height: 100px;
+}
+
+.actors,
+.plays,
+.posts,
+.users {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.title-link,
+.title-link:hover {
+  color: black;
+}
+
+.actor h4,
+.play h4,
+.users h4 {
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.actor-name,
+.play-title,
+.post-title,
+.username {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.actor-name,
+.play-title,
+.play-subtitle,
+.post-title,
+.post-subtitle,
+.username,
+.user-name {
+  text-align: center;
+}
+
+.section-subitem-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.section-subitem {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  width: fit-content;
+}
+
+.section-subitem,
+.section-subitem:hover {
+  color: whitesmoke;
+}
+
+.section-item:nth-child(odd) .section-subitem {
+  background-color: firebrick;
+}
+
+.section-item:nth-child(even) .section-subitem {
+  background-color: darkgreen;
+}
+
+.item-btn-container {
+  left: 0;
+  padding: 0 30px;
+  position: absolute;
+  text-align: right;
+  top: 7px;
+  width: 100%;
+}
+
+.item-btn {
+  border: none;
+  border-radius: 0 0 5px 5px;
+  padding: 10px 20px;
+}
+
+.actor-img {
+  float: left;
+  margin-right: 20px;
+}
+
+.actor-cv {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.actor-cv.with-photo {
+  min-height: 200px;
+}
+
+.play-subtitle {
+  font-size: 1.2rem;
+}
+
+.play-images-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.play-img {
+  margin: 5px;
+}
+
+.change-pass-btn,
+.change-pass-btn:hover {
+  background-color: teal;
+  color: whitesmoke;
+  margin-left: 10px;
+}
+
+.edit-item-btn,
+.edit-item-btn:hover {
+  background-color: royalblue;
+  color: whitesmoke;
+}
+
+.delete-item-btn,
+.delete-item-btn:hover {
+  background-color: black;
+  color: red;
+  margin-left: 10px;
+}
+/* End Actors, Plays, Users sections */

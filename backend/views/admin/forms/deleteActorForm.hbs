@@ -1,0 +1,9 @@
+<h3 class="delete-question">
+    ¿Querés eliminar a <strong><span>{{content.ActorFullName}}</span></strong>?
+</h3>
+<form action="/admin/actors/actor/{{content.ActorId}}/delete" class="delete-form" method="post">
+    <input class="delete-btn" type="submit" value="Eliminar" />
+    <a class="cancel-btn" href="javascript:history.back()">
+        Cancelar
+    </a>
+</form>

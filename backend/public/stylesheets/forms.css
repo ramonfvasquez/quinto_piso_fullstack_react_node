@@ -1,0 +1,174 @@
+/* Begin general form styles */
+.form-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 50px auto;
+  width: 100%;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+}
+
+.form-group {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.form-error-msg {
+  color: firebrick;
+  font-weight: bold;
+}
+
+select {
+  padding: 10px;
+  width: 100%;
+}
+
+textarea {
+  resize: none !important;
+  white-space: pre-wrap;
+}
+
+.submit-btn {
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: whitesmoke;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.back-btn,
+.cancel-btn,
+.delete-btn,
+.edit-btn {
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0 5px;
+  padding: 7px 10px;
+}
+
+.back-btn,
+.back-btn:hover,
+.cancel-btn,
+.cancel-btn:hover,
+.edit-btn,
+.edit-btn:hover {
+  background-color: royalblue;
+  color: whitesmoke;
+}
+
+.incorrect-data-container p {
+  color: firebrick;
+}
+.missing-data,
+.incorrect-data-container {
+  width: 100%;
+}
+
+.missing-data p,
+.incorrect-data-container p {
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+/* End general form styles */
+
+/* Begin Add/Edit Actor */
+.photo-uploader {
+  height: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+.photo-uploader-lbl {
+  background-color: royalblue;
+  border-radius: 5px;
+  color: whitesmoke;
+  margin-bottom: 0;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.preview {
+  text-align: center;
+  width: 100%;
+}
+
+.photo {
+  max-height: 300px;
+  max-width: 100%;
+}
+
+.existing-actor,
+.existing-actor:hover {
+  color: black;
+}
+/* End Add/Edit Actor */
+
+/* Begin Add/Edit Play */
+.actors-years {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.actors-selector {
+  width: 65%;
+}
+
+.years {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+}
+
+.year {
+  margin-top: 0;
+  width: 100%;
+}
+
+.play-photo {
+  margin: 20px 0;
+  max-height: 300px;
+  max-width: 100%;
+}
+
+.play-photo::after {
+  background-color: brown;
+  height: 100px;
+  margin: 100px;
+  width: 100px;
+}
+/* End Add/Edit Play */
+
+/* Begin Delete form */
+.delete-question {
+  text-align: center;
+}
+
+.delete-form {
+  margin: 30px auto;
+  width: fit-content;
+}
+
+.delete-btn,
+.delete-btn:hover {
+  background-color: black;
+  border: none;
+  color: red;
+  height: 42px;
+  padding: 7px 10px;
+}
+/* End Delete form */

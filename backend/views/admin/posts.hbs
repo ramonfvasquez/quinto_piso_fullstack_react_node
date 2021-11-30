@@ -1,0 +1,36 @@
+<div class="section-btns">
+    <a href="/admin/blog/add" class="section-btn section-btn-post darkblue">
+        Agregar publicación
+    </a>
+</div>
+<div>
+    <ul class="posts">
+        {{#each content}}
+            <li class="section-item post">
+                <a href="/admin/blog/post/{{this.BlogPostId}}" class="title-link">
+                    <h1 class='post-title'>
+                        {{this.BlogPostTitle}}
+                    </h1>
+                </a>
+                <p class='post-subtitle'>
+                    {{this.BlogPostAuthor.userFullName}} [{{this.BlogPostPublicationDate}}]
+                </p>
+                <div class="post-body-container">
+                    <p class="play-conception"> 
+                        {{{this.BlogPostBody}}}
+                    </p>
+                </div>
+                {{#when this.BlogPostAuthor.username "eq" this.currentUser}}
+                <div class="item-btn-container">
+                    <a href="/admin/blog/post/{{this.BlogPostId}}/edit" class="item-btn edit-item-btn">
+                        Editar
+                    </a>
+                    <a href="/admin/blog/post/{{this.BlogPostId}}/delete" class="item-btn delete-item-btn">
+                        Eliminar
+                    </a>
+                </div>
+                {{/when}}
+            </li>
+        {{/each}}
+    </ul>
+</div>

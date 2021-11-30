@@ -1,0 +1,24 @@
+<header class="header-container">
+    <img src="/images/icons/theater-masks.png" alt="" class="header-logo" />
+    <h1 class="header-title">
+        Compañía Teatral Quinto Piso
+    </h1>
+    {{#if username}}
+        <nav class='nav-container'>
+            <div class='nav-btn-container'>
+                <a href="/admin/home"class="nav-btn gold">
+                    Inicio
+                </a>
+                <a href="/admin/plays"class="nav-btn orangered">
+                    Obras
+                </a>
+                <a href="/admin/actors"class="nav-btn green">
+                    Actores/Actrices
+                </a>
+                <a href="/admin/users"class="nav-btn purple">
+                    Administradores
+                </a>
+            </div>
+        </nav>
+    {{/if}}
+</header>

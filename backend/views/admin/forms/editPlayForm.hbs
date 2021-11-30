@@ -1,0 +1,82 @@
+<div class="form-container">
+    <form action="/admin/plays/play/{{content.PlayId}}/edit" enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label for="play-title">
+                Título
+            </label>
+            <input class="form-control" id="play-title" name="playTitle" type="text" value="{{content.PlayTitle}}" />
+        </div>
+        <div class="form-group">
+            <label for="play-author">
+                Autor
+            </label>
+            <input class="form-control" id="play-author" name="playAuthor" type="text" value="{{content.PlayAuthor}}" />
+        </div>
+        <div class="actors-years form-group">
+            <div class="actors-selector">
+                <label for="actors">
+                    Actores/Actrices
+                </label>
+                <select class="form-control" multiple name="actors" size="10">
+                    {{#each content.actors}}
+                        <option {{#if this.selected}}selected{{/if}} value="{{this.ActorId}}">
+                            {{this.ActorFullName}}
+                        </option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="years">
+                <div class="year">
+                    <label for="first-year">
+                        Año de estreno
+                    </label>
+                    <input class="form-control" id="first-year" max="2050" min="2000" name="firstYear" step="1" type="number" value="{{content.PlayFirstYear}}" />
+                </div>
+                <div class="year">
+                    <label for="last-year">
+                        Último año
+                    </label>
+                    <input class="form-control" id="last-year" max="2050" min="2000" name="lastYear" step="1" type="number" value="{{content.PlayLastYear}}" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="photo-uploader-lbl" for="play-photos-uploader" onchange="showPreviewPlay(event)">
+                Subir fotos
+                <input class="photo-uploader" id="play-photos-uploader" multiple name="playPhotos" type="file" />
+            </label>
+            <div class="preview">
+                <small id='delete-photo-msg' style="height: 0; margin 0; visibility: hidden;">
+                    Hacé clic en una foto para borrarla.
+                </small>
+                <ul id="photos-list">
+                    {{#each content.photos}}
+                        <li class="play-photo-item" value="{{this.photoId}}">
+                            <img class="photo old" onclick="return this.parentNode.remove();" src="/public/images/plays/{{this.fileName}}" />
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="play-conception">
+                Concepción
+            </label>
+            <textarea class="form-control" id="play-conception" name="playConception" rows="10">{{content.PlayConception}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="play-staging">
+                Puesta en escena
+            </label>
+            <textarea class="form-control" id="play-staging" name="playStaging" rows="10">{{content.PlayStaging}}</textarea>
+        </div>
+        <div class="form-group">
+            <input class="submit-btn" id="edit-play-btn" type="submit" value="Editar" />
+        </div>
+        <input id="old-photos-array" name="oldPhotosArray" style="height: 0; margin: 0; visibility: hidden;" type="text">
+        <input id="new-photos-array" name="newPhotosArray" style="height: 0; margin: 0; visibility: hidden;" type="text">
+    </form>
+</div>
+<script src="/public/javascripts/createPhotosArrays.js"></script>
+<script src="/public/javascripts/photoPreviews.js"></script>
+<script src="/public/javascripts/removePhoto.js"></script>

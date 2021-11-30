@@ -1,0 +1,26 @@
+<div class="page-container">
+    <div class="page-subsection-container actor-images-cv-container{{#if content.ActorProfilePhoto}} with-photo{{/if}}">
+        <p>
+        {{#if content.ActorProfilePhoto}}
+            <img src="/images/actors/{{content.ActorProfilePhoto}}" class="page-img actor-img large" />
+        {{/if}}
+            {{content.ActorCurriculumVitae}}
+        </p>
+    </div>
+    <h3>
+        Obras en las que participó
+    </h3>
+    <div class="page-subsection-container actor-plays-container">
+        {{#if content.plays}}
+            {{#each content.plays}}
+                <a href="/admin/plays/play/{{this.this.PlayId}}" class="section-subitem firebrick">
+                    {{this.this.PlayTitle}}
+                </a>
+            {{/each}}
+        {{else}}
+            <p class="no-subitems">
+                No participó de ninguna obra.
+            </p>
+        {{/if}}
+    </div>
+</div>
